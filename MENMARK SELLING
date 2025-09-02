@@ -1,0 +1,323 @@
+सार यह डॉक्युमेंट "MENMARK SELLING" मोबाइल सेलिंग ऐप का पूरा UI/UX और फीचर-स्पेसिफिकेशन है — ताकि आप इसे सीधे डेवलपर को दे सकें। डिजाइन Flipkart जैसी e-commerce UX को फॉलो करेगा: Add to Cart, Buy Now, कई पेमेंट ऑप्शन, कैटेगराइजेशन, और एक पूर्ण Admin Panel.
+
+
+---
+
+रंग (Colors) और टाइपोग्राफी
+
+Primary Header Color (Top bar): Yellow — #FFD400 (उपर ही yellow). 🟡
+
+Accent / Bottom bar color: वही Yellow (Footer / CTA highlights)
+
+Background / Theme: सफेद #FFFFFF — "yahaniche_bhi_yellow" संकेत से फूटर/कुछ एलीमेंट्स में yellow होगा।
+
+Secondary / Text color: Dark Gray #222222
+
+Muted text / placeholders: #777777
+
+Success / Positive: #28A745
+
+Error / Alerts: #E53935
+
+
+Font suggestion: Google Sans / Inter —
+
+Heading: 16–20px bold
+
+Subheading: 14–16px semi-bold
+
+Body: 12–14px regular
+
+
+
+---
+
+ग्रिड और स्पेसिंग
+
+Mobile width: 360–412dp typical
+
+Padding: 16px outer, component internal 12px
+
+Card corner radius: 12px
+
+Icon size: 24px (navbar), 28–40px (CTA)
+
+
+
+---
+
+मुख्य स्क्रीनें (User flow + Screens)
+
+1) Splash Screen (2–3s)
+
+लोगो सेंटर में (MENMARK LOGO)
+
+नीचे छोटा टैगलाइन: "Buy Smart. Sell Easy."
+
+बैकग्राउंड सफेद, ऊपर yellow बार स्लिम
+
+
+2) Onboarding / Intro (optional)
+
+2–3 कार्ड्स: Fast delivery, Secure payment, Return policy
+
+Skip बटन Right-top
+
+
+3) Authentication
+
+Login (Mobile / Email + OTP)
+
+Sign Up (Name, Mobile, Email)
+
+Forgot Password
+
+
+4) Home Screen (मुख्य)
+
+Top header (Yellow bar): Left: menu/hamburger, Center: logo/title, Right: cart icon with badge और search icon
+
+Below header: Search bar (placeholder: "Search products, brands...")
+
+Categories horizontal scroll: Men, Women, Electronics, Accessories, Shoes, Watches, New, Offers
+
+Banner carousel (full width) — promotional banners (swipe)
+
+Flash Deals / Today offers — horizontal cards with timer
+
+Product Grid / List — 2-column grid cards
+
+
+Product Card (grid item)
+
+Image (HD)
+
+Title (short)
+
+Price (bold) + MRP (strike) + discount %
+
+Rating stars + reviews count
+
+Below: two side-by-side buttons (small): Add to Cart (outline) and Buy Now (filled yellow)
+
+Quick wishlist heart icon top-right of image
+
+
+5) Product Detail Page
+
+Large product image carousel (swipe, pinch zoom)
+
+Title, ratings, reviews
+
+Size/Color selectors (if applicable)
+
+Price, offers, delivery estimate
+
+Buttons fixed at bottom: Add to Cart (left) and Buy Now (right — big yellow)
+
+Product description, specifications, reviews, seller info
+
+
+6) Cart Screen
+
+List of selected products with qty stepper, price calculation
+
+Promo code input
+
+Bottom summary: Subtotal, Delivery charges, Total
+
+Checkout button (big yellow)
+
+
+7) Checkout Flow
+
+Address selection / Add New Address
+
+Shipping options
+
+Payment method: UPI / Cards / Netbanking / Wallet / COD
+
+Order confirmation screen with order id + ETA + Track Order button
+
+
+8) Order Tracking
+
+Timeline view (Ordered → Packed → Shipped → Out for delivery → Delivered)
+
+Map preview (if available)
+
+Contact seller / support button
+
+
+9) Profile / Account
+
+Orders, Returns & Refunds, Wallet, Saved Addresses, Payment Methods, Coupons, Settings, Logout
+
+
+10) Wishlist, Notifications, Offers
+
+Wishlist list, push-notifications center, coupon listing
+
+
+
+---
+
+Navbar & Navigation
+
+Bottom navigation with 4 items:
+
+1. Home (icon)
+
+
+2. Categories (icon)
+
+
+3. Orders/Track (icon)
+
+
+4. Profile (icon)
+
+
+
+Floating cart shortcut top-right + badge
+
+
+
+---
+
+Admin Panel (Web dashboard) — features for seller / admin
+
+(डेवलपर को दिए जाने लायक स्पेसिफिकेशन)
+
+A) Authentication & Roles
+
+Super Admin, Admin, Seller, Support
+
+
+B) Dashboard
+
+Quick KPIs: Total sales (day/week/month), Orders pending, Active users, Revenue
+
+Graphs: Sales trend, Top categories, Top products
+
+
+C) Products Management (CRUD)
+
+Add product: Title, Description, Category, Subcategory, SKU, Price, MRP, Stock quantity, Images (multi), Variants (size/color), Weight/Dimensions, Return policy
+
+Bulk upload via CSV
+
+Edit / Disable product
+
+
+D) Orders Management
+
+View orders, update status (Packed/Shipped/Delivered/Returned), print invoice, assign tracking ID
+
+
+E) Users Management
+
+View users, block/unblock, KYC status (if needed)
+
+
+F) Coupons & Offers
+
+Create coupon codes, % or flat discount, validity, usage limits
+
+
+G) Payments & Settlements
+
+View transactions, payouts to sellers, refunds
+
+
+H) Content & Banners
+
+Manage homepage banners, category banners, promotional popups
+
+
+I) Support / Chat
+
+View & respond to user tickets
+
+
+J) Settings
+
+Tax settings, shipping rates, return policy text, payment gateway config (Razorpay / UPI / Paytm)
+
+
+
+---
+
+UX Micro-interactions (recommended)
+
+Add to cart animation (product image fly to cart)
+
+Snackbar confirmation for Added to cart and Coupon applied
+
+Shake/validation for invalid forms
+
+Pull-to-refresh in lists
+
+
+
+---
+
+Accessibility & Performance
+
+Images: Lazy load + webp support
+
+Buttons: touch target ≥ 44px
+
+Contrast: Ensure yellow text over white uses outline or dark text for readability
+
+
+
+---
+
+Assets / Deliverables for Developer
+
+App logo (SVG + PNG 512x512)
+
+Color codes and font assets
+
+Product image folder (HD)
+
+Wireframes / sample screens (PNG)
+
+API contract: endpoints for products, cart, orders, auth, payments
+
+
+
+---
+
+Example copy (UI text) — Hindi
+
+Add to Cart → "कार्ट में जोड़ें"
+
+Buy Now → "अभी खरीदें"
+
+Search placeholder → "उत्पाद, ब्रांड या केवर्ड खोजें"
+
+Empty cart → "आपका कार्ट खाली है"
+
+Apply coupon → "कूपन लागू करें"
+
+
+
+---
+
+Quick Implementation Notes for Dev
+
+1. Frontend: React Native (recommended) or Flutter
+
+
+2. Backend: Node.js + Express or Firebase (Realt-time orders + storage)
+
+
+3. Database: MongoDB / Firestore
+
+
+4. Payment Gateway: Razorpay / UPI integration — ensure PCI compliance for cards
+
+
+5. Cloud Storage: AWS S3 / Firebase Storage for product images
